@@ -12,7 +12,13 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  @include border-radius();
+  @include border-radius($badge-border-radius);
+
+  @at-root a#{&} {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
 
   // Empty badges collapse automatically
   &:empty {
